@@ -51,6 +51,8 @@ async function tryDatabaseAuth(email: string, password: string) {
 }
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
+  secret: process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET || "clinic-app-secret-key-2026",
+  trustHost: true,
   providers: [
     Credentials({
       name: "credentials",
