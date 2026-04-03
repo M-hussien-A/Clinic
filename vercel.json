@@ -1,8 +1,4 @@
 {
   "buildCommand": "npx prisma generate && npx prisma migrate resolve --applied 20260403_init && npx prisma migrate deploy && next build",
-  "framework": "nextjs",
-  "env": {
-    "DATABASE_URL": "postgresql://dummy:dummy@localhost:5432/dummy",
-    "NEXTAUTH_SECRET": "change-me-in-production-abc123xyz"
-  }
+  "framework": "nextjs"
 }
